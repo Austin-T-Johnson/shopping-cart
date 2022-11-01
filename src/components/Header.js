@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Container, FormControl, Nav, Badge, Dropdown } from 'react-bootstrap'
+import { Navbar, Container, FormControl, Nav, Badge, Dropdown, Button } from 'react-bootstrap'
 import { FaShoppingCart } from 'react-icons/fa'
 import { AiFillDelete } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
@@ -50,7 +50,11 @@ const Header = () => {
                                         </span>
                                     ))}
                                     </> 
-                                    : <span style={{ padding: 10 }}>Cart is Empty!</span>}
+                                    : <span style={{ padding: 10 }}>Cart is Empty!</span>
+                                    }
+                                    <Link to="/cart">
+                                        <Button style={{width: "95%", margin: "0 10px"}}>Go To Cart</Button>
+                                    </Link>
 
                         </Dropdown.Menu>
                     </Dropdown>
